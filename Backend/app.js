@@ -6,6 +6,7 @@
  dotenv.config()
  const cors = require('cors')
  const userRoutes = require('./routes/user.route')
+ const captainRoute = require('./routes/captain.route')
  const connectToDb = require('./db/db')
  connectToDb()
  
@@ -19,5 +20,6 @@
  })
 
  app.use('/users', userRoutes)
+ app.use('/captain', captainRoute)
 
  module.exports = app
